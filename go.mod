@@ -1,4 +1,4 @@
-module eqr-shared
+module github.com/eqr/eqr-shared
 
 go 1.18
 
