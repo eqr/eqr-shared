@@ -1,4 +1,4 @@
-package web_common
+package web
 
 import (
 	"net/http"
