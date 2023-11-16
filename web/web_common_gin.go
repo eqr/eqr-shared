@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func ShowErrorMessage(c *gin.Context, message string) {
+func ShowErrorMessageGin(c *gin.Context, message string) {
 	c.HTML(
 		http.StatusInternalServerError,
 		"error.html",
@@ -17,11 +17,11 @@ func ShowErrorMessage(c *gin.Context, message string) {
 	)
 }
 
-func ShowError(c *gin.Context, err error) {
-	ShowErrorMessage(c, err.Error())
+func ShowErrorGin(c *gin.Context, err error) {
+	ShowErrorMessageGin(c, err.Error())
 }
 
-func Redirect(c *gin.Context, targetUrl string) {
+func RedirectGin(c *gin.Context, targetUrl string) {
 	c.Redirect(http.StatusFound, targetUrl)
 	c.Abort()
 }
